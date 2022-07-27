@@ -4,7 +4,7 @@ Este projeto é um teste para desenvolvedor Angular nível Junior.
 
 ## Requerimentos de software
 
-Você precisa ter instalado em sua máquina os seguintes softwares para executar este teste:
+Tenha instalado em sua sua máquina os seguintes softwares para executar este teste
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [NodeJS](https://nodejs.org/)
