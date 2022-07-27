@@ -1,0 +1,41 @@
+<h1>Cadastro de Cliente</h1>
+
+<mat-dialog-content>
+
+    <form [formGroup]="this.myForm">
+
+        <mat-form-field>
+            <mat-label>Nome</mat-label>
+            <input matInput type="text" maxlength="100" formControlName="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Dt Nasc</mat-label>
+            <input matInput type="date" formControlName="dtnasc">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Estado Civil</mat-label>
+            <mat-select formControlName="estadocivil">
+                <mat-option *ngFor="let item of this.listaEstadoCivil" [value]="item">
+                    {{item}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Salário</mat-label>
+            <input matInput type="number" step="1.00" formControlName="salario">
+        </mat-form-field>
+
+    </form>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+
+    <button mat-button [disabled]="!this.myForm.dirty || this.myForm.invalid" (click)="this.salva()">
+        <mat-icon>save</mat-icon> Salva
+    </button>
+
+</mat-dialog-actions>

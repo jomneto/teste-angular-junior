@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 95%;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+    width: 80%;
+    max-width: 1024px;
+    margin: auto;
+}
+
+table,
+mat-form-field {
+    width: 100%;
+}
+
+.mat-row:hover .mat-cell {
+    background-color: lightgray;
+}
