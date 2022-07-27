@@ -1,4 +1,4 @@
-# Teste para Desenvolvedor Angular Junior
+# Teste para vaga de programador Angular junior
 
 Este projeto é um teste para desenvolvedor Angular nível Junior.
 
