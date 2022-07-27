@@ -8,13 +8,13 @@ Você precisa ter instalado em sua máquina os seguintes softwares para executar
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [NodeJS](https://nodejs.org/)
-- [Github](https://github.com/)
 
 ## Passo para instalar a aplicação
 
 1. Crie uma conta no Github caso ainda não possua uma
 2. Instale os softwares em sua máquina caso ainda não tenha feito
-3.  
+3. Crie um diretório para baixar o seu teste
+4. Abra o visual studio code neste diretório com o comando: `code .`
 
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
