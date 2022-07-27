@@ -4,7 +4,7 @@ Este projeto é um teste para desenvolvedor Angular nível Junior.
 
 ## Pré-requisitos para fazer o teste
 
-###Para conseguir fazer este teste você obrigatóriamente deverá ter conhecimento nas seguintes ferramentas
+### Para conseguir fazer este teste você obrigatóriamente deverá ter conhecimento nas seguintes ferramentas
 
 - Github (ter uma conta inclusive)
 - Angular
