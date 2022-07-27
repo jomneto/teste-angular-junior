@@ -24,10 +24,16 @@ Você precisa ter instalado em sua máquina os seguintes softwares para executar
 
 Este é um projeto exemplo de um cadastro de clientes.
 
-Os dados estão em lista de objetos em memória.
+Os dados estão em lista de objetos em memória, não estão sendo persistidos.
 
-Navegue um pouco pelo sistema para entender seu funcionamento.
+Navegue um pouco pelo sistema para entender seu funcionamento, mas é um CRUD simples, com funções de ADICIONAR, ALTERAR e EXCLUIR clientes.
 
 ## Teste
 
-1. 
+1. Adicione um novo CRUD de Produtos seguindo o mesmo modelo do CRUD de Clientes
+2. As propriedades dos produtos serão: Código, Descrição, Valor Unitário, os 3 campos são obrigatórios
+3. O campo código deverá ser digitado pelo usuário e não poderá ser repetido, ou seja, se o usuário tentar adicionar um produto com um código já existente o sistema deverá avisar
+5. Crie um botão na tela para acessar o CRUD de Produtos
+6. Atualize o projeto no seu GITHUB e depois solicite um PULL REQUEST para que possamos verificar o seu desenvolvimento
+
+Boa sorte !

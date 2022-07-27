@@ -27,6 +27,7 @@ export class ClientesDetComponent implements OnInit {
   ]
 
   ngOnInit(): void {
+    this.myForm.markAllAsTouched()
   }
 
   salva() {
