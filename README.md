@@ -1,8 +1,20 @@
-# TesteAngularJunior
+# Teste para Desenvolvedor Angular Junior
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+Este projeto é um teste para desenvolvedor Angular nível Junior.
 
-## Development server
+## Requerimentos de software
+
+Você precisa ter instalado em sua máquina os seguintes softwares para executar este teste:
+
+- Visual Studio Code (`https://code.visualstudio.com/)`
+- NodeJS (`https://nodejs.org/`)
+- Github (`https://github.com/`)
+
+## Passo para instalar a aplicação
+
+1. Instale os softwares em sua máquina caso ainda não tenha feito
+2.  
+
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
