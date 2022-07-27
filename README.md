@@ -9,7 +9,7 @@ Tenha instalado em sua sua máquina os seguintes softwares para executar este te
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [NodeJS](https://nodejs.org/)
 
-## Passo para instalar a aplicação
+## Passos para instalar a aplicação
 
 1. Crie uma conta no Github caso ainda não possua uma
 2. Instale os softwares em sua máquina caso ainda não tenha feito
