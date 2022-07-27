@@ -15,6 +15,15 @@ Você precisa ter instalado em sua máquina os seguintes softwares para executar
 2. Instale os softwares em sua máquina caso ainda não tenha feito
 3. Crie um diretório para baixar o seu teste
 4. Abra o visual studio code neste diretório com o comando: `code .`
+5. Acesse o diretório do GITHUB, clique no botão `CODE` e selecione a opção `Open with Visual Studio`
+6. Abra o terminal teclando `ctrl-\``
+7. Instale as bibliotecas: `npm install`
+6. Execute o programa: `ng serve --o`
+
+## Entendendo o projeto
+
+Este é um projeto exemplo de um cadastro de clientes.
+Os dados estão em lista de objetos em memória.
 
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
