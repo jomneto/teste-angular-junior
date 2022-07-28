@@ -25,6 +25,6 @@ Este projeto é um teste para desenvolvedor Angular nível Junior.
 4. As propriedades dos produtos serão: `Código`, `Descrição` e `Valor Unitário`, os 3 campos são obrigatórios
 5. O campo código deverá ser digitado pelo usuário e não poderá ser repetido, ou seja, se o usuário tentar adicionar um produto com um código já existente o sistema deverá avisar
 6. Crie um botão na tela para acessar o CRUD de Produtos
-7. Atualize o projeto na sua conta do GitHub e depois solicite um PULL REQUEST para que possamos verificar o seu desenvolvimento
+7. Atualize o projeto na sua conta do GitHub e depois solicite um `PULL REQUEST` para que possamos verificar o seu desenvolvimento
 
 Boa sorte !
