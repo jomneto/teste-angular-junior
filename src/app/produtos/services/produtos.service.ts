@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Produtos } from '../model/Produtos';
 import { MatDialog } from '@angular/material/dialog';
+import { Produto } from '../model/produto';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProdutosService {
 
-  produtos: Produtos[] = [
-    new Produtos(1, "P001", "Arroz", 350.00),
-    new Produtos(2, "P002", "Feijao", 220.00),
-    new Produtos(3, "P003", "Macarrao", 160.00),
-    new Produtos(4, "P004", "Kachup", 40.00),
-    new Produtos(5, "P005", "Banana", 300.00),
+  produtos: Produto[] = [
+    new Produto(1, "P001", "Arroz", 350.00),
+    new Produto(2, "P002", "Feijao", 220.00),
+    new Produto(3, "P003", "Macarrao", 160.00),
+    new Produto(4, "P004", "Kachup", 40.00),
+    new Produto(5, "P005", "Banana", 300.00),
   ];
 
   constructor(public dialog: MatDialog) { }
@@ -24,7 +24,7 @@ export class ProdutosService {
    * @returns lista de produtos
    */
   list(filtro: string = ''){
-    let result: Produtos[] = [];
+    let result: Produto[] = [];
 
     if(filtro)
       result = this.produtos.filter(p => p.getCodigo().toLowerCase().includes(filtro.toLowerCase()))
@@ -48,7 +48,7 @@ export class ProdutosService {
    * nas lista produtos
    * @param produto
    */
-  create(produto: Produtos): void{
+  create(produto: Produto): void{
     if(produto.getId() == 0){
       //Criar um ID para o novo produto a ser salvo
       produto.setId(this.produtos[this.produtos.length - 1].getId() + 1);
@@ -63,7 +63,7 @@ export class ProdutosService {
    * @param produto
    * @param id
    */
-  update(produto: Produtos, id: number){
+  update(produto: Produto, id: number){
     //Atualiza os dados de um objecto produto
     let pAtualizar = this.get(id);
     if(pAtualizar){
@@ -73,8 +73,12 @@ export class ProdutosService {
     }
   }
 
+  /**
+   *
+   * @param id
+   */
   delete(id: number){
-
+    this.produtos = this.produtos.filter( p => p.getId() != id );
   }
 
 

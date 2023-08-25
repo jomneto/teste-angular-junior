@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Produtos } from './model/Produtos';
+import { Produto } from '../model/produto';
 
 @Component({
   selector: 'app-produtos',
@@ -10,7 +10,7 @@ export class ProdutosComponent implements  OnInit{
 
   constructor(){}
 
-  myProduts: Produtos[] = [];
+  myProduts: Produto[] = [];
   displayColumns: string[] = ['codigo', 'descricao', 'valorUnitario'];
 
 

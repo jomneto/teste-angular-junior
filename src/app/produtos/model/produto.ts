@@ -1,7 +1,7 @@
 
 
 
-export class Produtos {
+export class Produto {
 
   private id: number = 0;
   private codigo: string = '';

@@ -19,6 +19,7 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { TelaComponent } from './components/tela/tela.component';
 import { HomeComponent } from './home/home.component';
 import { ProdutosComponent } from './produtos/component/produtos.component';
+import { ProdutoEditarComponent } from './produtos/produto-editar/produto-editar.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ProdutosComponent } from './produtos/component/produtos.component';
     ClientesComponent,
     HomeComponent,
     ClientesDetComponent,
-    ProdutosComponent
+    ProdutosComponent,
+    ProdutoEditarComponent
   ],
   imports: [
     BrowserModule,
