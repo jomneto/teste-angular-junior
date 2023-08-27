@@ -18,8 +18,8 @@ import { ClientesDetComponent } from './clientes-det/clientes-det.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { TelaComponent } from './components/tela/tela.component';
 import { HomeComponent } from './home/home.component';
-import { ProdutosComponent } from './produtos/component/produtos.component';
-import { ProdutoEditarComponent } from './produtos/produto-editar/produto-editar.component';
+import { ProdutFormComponent } from './produtos/produt-form/produt-form.component';
+import { ProdutComponent } from './produtos/component/produt.component';
 
 
 @NgModule({
@@ -29,8 +29,8 @@ import { ProdutoEditarComponent } from './produtos/produto-editar/produto-editar
     ClientesComponent,
     HomeComponent,
     ClientesDetComponent,
-    ProdutosComponent,
-    ProdutoEditarComponent
+    ProdutComponent,
+    ProdutFormComponent
   ],
   imports: [
     BrowserModule,
