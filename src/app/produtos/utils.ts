@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
 import { Produt } from "./model/produt";
 import { ProdutFormComponent } from "./produt-form/produt-form.component";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +26,14 @@ export class Utils {
     if(ret)
       result = ret as Produt;
     return result;
+  }
+
+  getFormGroup(produt: Produt){
+    return new FormGroup({
+      code: new FormControl(produt.getCode(), [Validators.required, Validators.pattern('^[0-9A-Z]+$'), Validators.maxLength(10)]),
+      description: new FormControl(produt.getDescription(), [Validators.required, Validators.pattern('[a-zA-Z0-9 ]+'), Validators.maxLength(100)]),
+      unitPrice: new FormControl(produt.getUnitPrice(), Validators.required)
+    })
   }
 
 }

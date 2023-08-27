@@ -8,7 +8,7 @@ import { Produt } from "../model/produt";
 
 export class Backend {
 
-  produts: Produt[] = [
+  private produts: Produt[] = [
     new Produt(1, "P001", "Arroz", 350.00),
     new Produt(2, "P002", "Feijao", 220.00),
     new Produt(3, "P003", "Macarrao", 160.00),
@@ -18,14 +18,26 @@ export class Backend {
 
   constructor(){}
 
+  /**
+   *
+   * @returns
+   */
   getAll(){
     return this.produts
   }
 
+  /**
+   *
+   * @param produt
+   */
   setProduct(produt: Produt): void{
     this.produts.push(produt);
   }
 
+  /**
+   *
+   * @param id
+   */
   deleteProduct(id: number): void{
     this.produts = this.produts.filter( p => p.getId() != id );
   }
