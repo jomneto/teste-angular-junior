@@ -8,6 +8,7 @@ import { ProdutComponent } from './produtos/component/produt.component';
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'clientes', component: ClientesComponent },
+  { path: 'cli', component: ClientesComponent },
   { path: 'produtos', component: ProdutComponent }
 ];
 
