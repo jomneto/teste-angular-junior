@@ -19,7 +19,7 @@ export function codeExists (code: string){
 }
 
 
-export function sameObject (id: number, code: string){ console.log(id)
+export function sameObject (id: number, code: string){
   const data = bk.getAll()
   const res = data.findIndex(data => data.getId() == id && data.getCode() == code)
   if(res >= 0 ) return true
