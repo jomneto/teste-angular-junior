@@ -24,6 +24,16 @@ export class ProdutComponent implements  OnInit{
 
   ngOnInit(): void {
     this.updateList()
+
+    /**
+     * Evento para filtrar o que vem do formulario de pesquisa
+     * */
+    this.myForm.valueChanges.subscribe( form => {
+      if(form.filter){
+        this.updateList()
+      }
+    });
+
   }
 
 

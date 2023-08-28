@@ -3,7 +3,7 @@ import { Utils } from '../utils';
 import { Produt } from '../model/produt';
 import { FormGroup } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { codeProductExists } from '../services/checkProductCode';
+import { codeExists, sameObject } from '../services/checkProductCode';
 
 @Component({
   selector: 'app-produt-form',
@@ -25,18 +25,26 @@ export class ProdutFormComponent implements OnInit{
   }
 
   save(){
-
     const {code, description, unitPrice } = this.formGroup.value
 
-    //Verifica se o codigo digitado ja existe
-    if(codeProductExists(code)){
+    //Verifica se o codigo ja existe caso seja novo registo
+    if(this.product.getId() == 0 && codeExists(code)){
       this.errorCodeMessage = 'Este código já existe'
       return
+    } else
+    //Verifica se o objecto tem um ID, caso TRUE verifica se o codigo
+    //existe, caso TRUE verifica se pertencem ao mesmo objecto, se for falso mostra mensagem
+    if(this.product.getId() > 0 && codeExists(code)){
+      if(!sameObject(this.product.getId(), code)){
+        this.errorCodeMessage = 'Este código já existe'
+        return
+      }
+
     }
 
     this.errorCodeMessage = ''
     let obj = this.product
-    obj = new Produt(0, code || '', description || '', unitPrice || 0)
+    obj = new Produt(this.product.getId(), code || '', description || '', unitPrice || 0)
     this.dlgRef.close(obj)
   }
 
