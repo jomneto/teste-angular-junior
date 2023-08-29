@@ -3,6 +3,7 @@ import { Produt } from '../model/produt';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CrudProdutService } from '../services/crud-produt.service';
 import { Utils } from '../utils';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-produt',
@@ -16,34 +17,31 @@ export class ProdutComponent implements  OnInit{
   constructor(private service: CrudProdutService){}
 
   data: Produt[] = [];
+  dataSource: any
   columnsNames: string[] = ['code', 'description', 'unitPrice', 'commands'];
 
   myForm = new FormGroup({
-    filter: new FormControl('')
+    input: new FormControl('')
   })
 
   ngOnInit(): void {
-    this.updateList()
-
-    /**
-     * Evento para filtrar o que vem do formulario de pesquisa
-     * */
-    this.myForm.valueChanges.subscribe( form => {
-      if(form.filter){
-        this.updateList()
-      }
-    });
-
+    this.listProduct()
   }
 
 
   /**
    *
    */
-  updateList(){
-    let filter = this.myForm.value.filter || '';
+  listProduct(){
+    //let filter = this.myForm.value.filter || '';
     this.data = []
-    this.data = this.data.concat(this.service.list(filter))
+    this.data = this.data.concat(this.service.list(''))
+    this.dataSource = new MatTableDataSource(this.data);
+  }
+
+  filter(event: Event){
+    const filterValue = (event.target as HTMLInputElement).value
+    this.dataSource.filter = filterValue.trim().toLowerCase()
   }
 
   /**
@@ -54,7 +52,7 @@ export class ProdutComponent implements  OnInit{
     let ret = await this.utils.formDialog(newProd)
     if(ret){
       this.service.create(ret)
-      this.updateList()
+      this.listProduct()
     }
 
   }
@@ -68,7 +66,7 @@ export class ProdutComponent implements  OnInit{
     let ret = await this.utils.formDialog(produt)
     if(ret){
       this.service.create(ret)
-      this.updateList()
+      this.listProduct()
     }
   }
 
@@ -80,7 +78,7 @@ export class ProdutComponent implements  OnInit{
   async remove(produt: Produt){
     if(confirm(`Deseja excluir o produto ${produt.getDescription()}`)){
       this.service.delete(produt.getId())
-      this.updateList()
+      this.listProduct()
     }
   }
 

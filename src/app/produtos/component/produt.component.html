@@ -5,8 +5,8 @@
     <div fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="10px">
         <mat-form-field>
             <mat-label>Filtro</mat-label>
-            <input matInput placeholder="Digite seu filtro aqui" formControlName="filter"
-                (change)="this.updateList()">
+            <input matInput placeholder="Digite seu filtro aqui" formControlName="input"
+                (keyup)="filter($event)" #input>
         </mat-form-field>
         <button mat-mini-fab (click)="this.add()"><mat-icon>add</mat-icon></button>
     </div>
@@ -15,7 +15,7 @@
 
 <!----------Tablelist of the products -->
 
-<table mat-table [dataSource]="this.data">
+<table mat-table [dataSource]="this.dataSource">
 
   <ng-container matColumnDef="code">
       <th mat-header-cell *matHeaderCellDef>Código</th>
@@ -48,7 +48,10 @@
 
   <tr mat-header-row *matHeaderRowDef="columnsNames"></tr>
   <tr mat-row *matRowDef="let row; columns: columnsNames;"></tr>
-
+  <!-- Row shown when there is no matching data. -->
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+  </tr>
 </table>
 
 
