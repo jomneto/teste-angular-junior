@@ -3,7 +3,6 @@ import { Produt } from '../model/produt';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CrudProdutService } from '../services/crud-produt.service';
 import { Utils } from '../utils';
-import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-produt',
@@ -18,7 +17,6 @@ export class ProdutComponent implements  OnInit{
 
   data: Produt[] = [];
   columnsNames: string[] = ['code', 'description', 'unitPrice', 'commands'];
-  dataSource: any
 
   myForm = new FormGroup({
     filter: new FormControl('')
@@ -46,16 +44,6 @@ export class ProdutComponent implements  OnInit{
     let filter = this.myForm.value.filter || '';
     this.data = []
     this.data = this.data.concat(this.service.list(filter))
-    this.dataSource = new MatTableDataSource(this.data)
-  }
-
-  /**
-   * Metodo que permite filtrar um produto na lista de  produtos
-   * @param event
-   */
-  filter(event: Event){
-    const filterValue = (event.target as HTMLInputElement).value
-    this.dataSource.filter = filterValue.trim().toLowerCase()
   }
 
   /**
