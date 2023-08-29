@@ -6,7 +6,7 @@
         <mat-form-field>
             <mat-label>Filtro</mat-label>
             <input matInput placeholder="Digite seu filtro aqui" formControlName="filter"
-                (change)="this.updateList()">
+                (keyup)="this.filter($event)">
         </mat-form-field>
         <button mat-mini-fab (click)="this.add()"><mat-icon>add</mat-icon></button>
     </div>
@@ -15,7 +15,7 @@
 
 <!----------Tablelist of the products -->
 
-<table mat-table [dataSource]="this.data">
+<table mat-table [dataSource]="this.dataSource">
 
   <ng-container matColumnDef="code">
       <th mat-header-cell *matHeaderCellDef>Código</th>
