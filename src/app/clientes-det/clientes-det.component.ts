@@ -31,8 +31,8 @@ export class ClientesDetComponent implements OnInit {
   }
 
   salva() {
-    const {nome, dtnasc, estadocivil, salario} = this.myForm.value 
-    let retorno = this.data 
+    const {nome, dtnasc, estadocivil, salario} = this.myForm.value
+    let retorno = this.data
     retorno.nome = nome || ''
     retorno.dtnasc = dtnasc || ''
     retorno.estadocivil = estadocivil || ''

@@ -49,7 +49,7 @@ export class ClientesService {
    * Salva um cliente adicionando se o ID for ZERO
    * @param cliente Cliente
    */
-  save(cliente: Cliente) {
+  save(cliente: Cliente) { console.log("ID: "+ cliente.id)
     if (cliente.id == 0) {
       // Adiciona novo cliente
       cliente.id = this.dados[this.dados.length-1].id + 1

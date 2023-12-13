@@ -43,6 +43,7 @@ export class ClientesComponent implements OnInit {
 
   async altera(cliente: Cliente) {
     let retorno = await this.svc.formAltera(cliente)
+    console.log(retorno)
     if(retorno) {
       this.svc.save(retorno)
       this.atualizaLista()

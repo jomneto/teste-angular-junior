@@ -18,6 +18,8 @@ import { ClientesDetComponent } from './clientes-det/clientes-det.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { TelaComponent } from './components/tela/tela.component';
 import { HomeComponent } from './home/home.component';
+import { ProdutFormComponent } from './produtos/produt-form/produt-form.component';
+import { ProdutComponent } from './produtos/component/produt.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { HomeComponent } from './home/home.component';
     TelaComponent,
     ClientesComponent,
     HomeComponent,
-    ClientesDetComponent
+    ClientesDetComponent,
+    ProdutComponent,
+    ProdutFormComponent
   ],
   imports: [
     BrowserModule,
